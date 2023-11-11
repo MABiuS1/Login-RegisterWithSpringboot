@@ -1,14 +1,14 @@
 package th.mfu.weather.Repo;
 
-import th.mfu.weather.Entity.Employee;
+import th.mfu.weather.Entity.User;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 import org.springframework.stereotype.Repository;
 import java.util.Optional;
 @EnableJpaRepositories
 @Repository
-public interface EmployeeRepo extends JpaRepository<Employee,Integer>
+public interface UserRepo extends JpaRepository<User,Integer>
 {
-    Optional<Employee> findOneByEmailAndPassword(String email, String password);
-    Employee findByEmail(String email);
+    Optional<User> findOneByEmailAndPassword(String email, String password);
+    User findByEmail(String email);
 }
